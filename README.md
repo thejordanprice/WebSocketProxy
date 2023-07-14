@@ -6,8 +6,14 @@ This userscript intercepts WebSocket connections and allows you to monitor and m
 
 1. Install Tampermonkey or Greasemonkey browser extension.
 2. Create a new userscript and paste the code from the WebSocketProxy.js file into the userscript editor.
-3. Save the userscript.
-4. The userscript will be automatically applied to all websites you visit.
+3. Add the following line at the top of the userscript file:
+```
+// @match https://example.com/a/b
+```
+   *This line ensures that the userscript only runs when the URL matches "https://example.com/a/b". Modify the URL as needed to match your desired website.*
+   
+5. Save the userscript.
+6. The userscript will be automatically applied when visiting the specified URL.
 
 ## Features
 
@@ -22,7 +28,7 @@ The userscript uses a Proxy object to intercept the creation of WebSocket instan
 
 ## Configuration
 
-No configuration is required for this userscript. It is designed to work automatically once installed and applied.
+No further configuration is required for this userscript. It is designed to work automatically once installed and applied.
 
 ## Compatibility
 
